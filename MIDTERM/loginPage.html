@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Admin Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>ABC Hotel</h1>
+    </div>
+    <div class="login-container">
+        <form id="loginForm" action="home.php" method="POST" onsubmit="return validateForm()">
+            <h2>Please login to enter</h2>
+
+           
+            <input type="text" id="username" name="username" placeholder="Enter username">
+            <span id="usernameError" class="error"></span>
+
+    
+            <input type="password" id="password" name="password" placeholder="Enter password">
+            <span id="passwordError" class="error"></span>
+
+            <button type="submit" href="home.php">LOGIN</button>
+        </form>
+    </div>
+
+    <script src="validation.js"></script>
+</body>
+</html>

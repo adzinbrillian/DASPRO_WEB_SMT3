@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Check - ABC Hotel</title>
+    <link rel="stylesheet" href="priceCheck.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ABC Hotel</h1>
+            <nav>
+                <a href="home.php">Home</a>
+                <a href="price-check.html" class="active">Price Check</a>
+                <a href="loginPage.html">Logout</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Input to Check The Price</h2>
+            <form id="priceForm">
+                <label for="floor">Floor:</label>
+                <input type="number" id="floor" name="floor" min="1" value="1" required><br><br>
+
+                <label for="roomType">Type:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="standard">Standard</option>
+                    <option value="superior">Superior</option>
+                    <option value="deluxe">Deluxe</option>
+                </select><br><br>
+
+                <label for="days">Day(s):</label>
+                <input type="number" id="days" name="days" min="1" value="1" required><br><br>
+
+                <label for="discount">Discount:</label>
+                <select id="discount" name="discount" required>
+                    <option value="none">None</option>
+                    <option value="member">Member</option>
+                    <option value="birthday">Birthday Promo</option>
+                </select><br><br>
+
+                <button type="button" onclick="calculatePrice()">CHECK</button>
+            </form>
+
+            <h3 id="totalPriceDisplay"></h3>
+            <h3 id="discountDisplay"></h3>
+            <h3 id="finalPaymentDisplay" style="color: red;"></h3>
+        </main>
+
+        <footer>
+            <p>Website Footer</p>
+        </footer>
+    </div>
+
+    <script src="priceCheck.js"></script>
+</body>
+</html>
